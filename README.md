@@ -31,3 +31,21 @@ java    7592 jeetupal   61u  IPv6 0xc2f5b2aec1b3ab67      0t0  TCP *:http-alt (L
 conversion json respone to place in Noderesponse.java file
 ******* Logic : replace this —> “  with “/
 http://www.unit-conversion.info/texttools/replace-text/
+
+=========================== Put image in Tomacat server and fetch ===============
+Run Tomcat ( go to /Tomcat/bin/ folder and run this ./startup.sh ) and put image in Webapp folder of tomcat( /Developer/Tomcat/webapps )
+
+e.g http://localhost:8180/test/ic_launcher2.png  if get error :
+➜  bin tail -f ../logs/catalina.2017-04-12.log
+12-Apr-2017 12:39:19.609 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8181"]
+12-Apr-2017 12:39:19.609 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+12-Apr-2017 12:39:19.609 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+12-Apr-2017 12:39:19.635 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8181"]
+12-Apr-2017 12:39:19.635 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8181"]
+12-Apr-2017 12:39:19.636 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+12-Apr-2017 12:39:19.636 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+
+Run this http://localhost:8181/test/ic_launcher2.png  Just change port.
+
+
+
